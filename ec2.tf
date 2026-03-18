@@ -11,14 +11,14 @@ terraform {
 
 
 provider "aws" {
-  region = "var.region"
+  region = var.region
 }
 
 
 
 resource "aws_instance" "task-33-example" {
 
-  ami           = "var.ami-id"
-  instance_type = "var.instance-type"
+  ami           = var.ami-id
+  instance_type = var.instance-type
  
 }
