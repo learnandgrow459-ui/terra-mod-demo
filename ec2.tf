@@ -19,6 +19,10 @@ provider "aws" {
 resource "aws_instance" "task-33-example" {
 
   ami           = var.ami-id
-  instance_type = var.instance-type
+  instance_type = local.instance_type
  
+}
+
+locals{
+  instance_type = "t2.micro"
 }
