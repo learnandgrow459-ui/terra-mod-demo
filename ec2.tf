@@ -11,14 +11,14 @@ terraform {
 
 
 provider "aws" {
-  region = "ap-south-1"
+  region = "var.region"
 }
 
 
 
 resource "aws_instance" "task-33-example" {
 
-  ami           = "ami-0317b0f0a0144b137"
-  instance_type = "t2.micro"
+  ami           = "var.ami-id"
+  instance_type = "var.instance-type"
  
 }
